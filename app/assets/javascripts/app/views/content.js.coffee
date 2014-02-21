@@ -7,9 +7,14 @@ class App.Views.Content extends Backbone.View
 		console.log('Loading Content View')
 		@$el.html(@template())
 		@renderEmptyView()
+		@renderProjectsView()
 		@
 
 	renderEmptyView: ->
 		v = new App.Views.Empty()
 		@$('#content-main').html(v.render().el)
+		@
+	renderProjectsView: ->
+		v= new App.Views.Projects()
+		@$('#content-sidebar').html(v.render().el)
 		@
