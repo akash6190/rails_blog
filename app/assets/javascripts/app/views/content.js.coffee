@@ -15,6 +15,6 @@ class App.Views.Content extends Backbone.View
 		@$('#content-main').html(v.render().el)
 		@
 	renderProjectsView: ->
-		v= new App.Views.Projects()
+		v= new App.Views.Projects({collection: new App.Collections.Projects })
 		@$('#content-sidebar').html(v.render().el)
 		@
