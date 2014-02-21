@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require handlebars.runtime
+//= require ./lib/underscore
+//= require ./lib/backbone
+//=require ./app/blogApp
