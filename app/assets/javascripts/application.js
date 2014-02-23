@@ -14,4 +14,5 @@
 //= require handlebars.runtime
 //= require ./lib/underscore
 //= require ./lib/backbone
+//= require ./lib/backbone-rails-sync
 //=require ./app/blogApp

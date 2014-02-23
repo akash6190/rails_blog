@@ -10,7 +10,6 @@ class App.Views.NewProject extends Backbone.View
 		@
 
 	saveProject: (e) ->
-
 		e.preventDefault()
 		@model.set name: @$('#new-project-name').val()
 		@model.set description: @$('#new-project-description').val()
