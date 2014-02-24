@@ -14,7 +14,6 @@ class App.Views.Projects extends Backbone.View
 	render: ->
 		@$el.html(@template())
 		@collection.forEach @renderProject, @
-
 		@
 
 	renderProject: (model) ->

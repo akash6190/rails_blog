@@ -4,11 +4,18 @@ class App.Routers.MainRouter extends Backbone.Router
 		"":"index"
 		"projects": "project"
 		"projects/new": "newProject"
+		"projects/[:id]" : "showProject"
 
 	initialize: ->
 		@headerView = new App.Views.Header()
 		@contentView = new App.Views.Content()
 		@footerView = new App.Views.Footer()
+
+	showProject: ->
+		@layoutViews()
+		@contentView.swapMain(new App.Views.Projects({
+			collection: new App.collections.Projects
+			}))
 
 	newProject: ->
 		@layoutViews()

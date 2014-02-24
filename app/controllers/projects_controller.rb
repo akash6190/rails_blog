@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
 	respond_to :json
 
 	def index
-		respond_with Project.all
+		@projects =  Project.all
 	end
 
 	def create
@@ -10,6 +10,11 @@ class ProjectsController < ApplicationController
 		project.save
 		respond_with project
 	end
+
+	def show
+		@project = Project.find(params[:id])
+	end
+
 
 	private
 
